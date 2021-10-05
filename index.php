@@ -46,7 +46,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Customer
 </script>
 </head>
 <body>
-<form class="jotform-form" action="https://submit.jotform.com/submit/212771750520450/" method="post" name="form_212771750520450" id="212771750520450" accept-charset="utf-8" autocomplete="on">
+<form class="jotform-form" action ="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" name="form_212771750520450" id="212771750520450" accept-charset="utf-8" autocomplete="on">
   <input type="hidden" name="formID" value="212771750520450" />
   <input type="hidden" id="JWTContainer" value="" />
   <input type="hidden" id="cardinalOrderNumber" value="" />
@@ -74,11 +74,11 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Customer
         <div id="cid_3" class="form-input-wide jf-required" data-layout="full">
           <div data-wrapper-react="true">
             <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
-              <input type="text" id="first_3" name="q3_fullName3[first]" class="form-textbox validate[required]" data-defaultvalue="" size="10" value="" data-component="first" aria-labelledby="label_3 sublabel_3_first" required="" />
+              <input type="text" id="first_3" name="firstName" class="form-textbox validate[required]" data-defaultvalue="" size="10" value="" data-component="first" aria-labelledby="label_3 sublabel_3_first" required="" />
               <label class="form-sub-label" for="first_3" id="sublabel_3_first" style="min-height:13px" aria-hidden="false"> First Name </label>
             </span>
             <span class="form-sub-label-container" style="vertical-align:top" data-input-type="last">
-              <input type="text" id="last_3" name="q3_fullName3[last]" class="form-textbox validate[required]" data-defaultvalue="" size="15" value="" data-component="last" aria-labelledby="label_3 sublabel_3_last" required="" />
+              <input type="text" id="last_3" name="lastName" class="form-textbox validate[required]" data-defaultvalue="" size="15" value="" data-component="last" aria-labelledby="label_3 sublabel_3_last" required="" />
               <label class="form-sub-label" for="last_3" id="sublabel_3_last" style="min-height:13px" aria-hidden="false"> Last Name </label>
             </span>
           </div>
@@ -96,7 +96,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Customer
             <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
               <span class="form-address-line form-address-street-line jsTest-address-lineField">
                 <span class="form-sub-label-container" style="vertical-align:top">
-                  <input type="text" id="input_4_addr_line1" name="q4_address4[addr_line1]" class="form-textbox validate[required] form-address-line" data-defaultvalue="" value="" data-component="address_line_1" aria-labelledby="label_4 sublabel_4_addr_line1" required="" />
+                  <input type="text" id="input_4_addr_line1" name="streetAddress" class="form-textbox validate[required] form-address-line" data-defaultvalue="" value="" data-component="address_line_1" aria-labelledby="label_4 sublabel_4_addr_line1" required="" />
                   <label class="form-sub-label" for="input_4_addr_line1" id="sublabel_4_addr_line1" style="min-height:13px" aria-hidden="false"> Street Address </label>
                 </span>
               </span>
@@ -104,7 +104,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Customer
             <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
               <span class="form-address-line form-address-street-line jsTest-address-lineField">
                 <span class="form-sub-label-container" style="vertical-align:top">
-                  <input type="text" id="input_4_addr_line2" name="q4_address4[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" value="" data-component="address_line_2" aria-labelledby="label_4 sublabel_4_addr_line2" />
+                  <input type="text" id="input_4_addr_line2" name="streetAddress2" class="form-textbox form-address-line" data-defaultvalue="" value="" data-component="address_line_2" aria-labelledby="label_4 sublabel_4_addr_line2" />
                   <label class="form-sub-label" for="input_4_addr_line2" id="sublabel_4_addr_line2" style="min-height:13px" aria-hidden="false"> Street Address Line 2 </label>
                 </span>
               </span>
@@ -112,13 +112,13 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Customer
             <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
               <span class="form-address-line form-address-city-line jsTest-address-lineField ">
                 <span class="form-sub-label-container" style="vertical-align:top">
-                  <input type="text" id="input_4_city" name="q4_address4[city]" class="form-textbox validate[required] form-address-city" data-defaultvalue="" value="" data-component="city" aria-labelledby="label_4 sublabel_4_city" required="" />
+                  <input type="text" id="input_4_city" name="city" class="form-textbox validate[required] form-address-city" data-defaultvalue="" value="" data-component="city" aria-labelledby="label_4 sublabel_4_city" required="" />
                   <label class="form-sub-label" for="input_4_city" id="sublabel_4_city" style="min-height:13px" aria-hidden="false"> City </label>
                 </span>
               </span>
               <span class="form-address-line form-address-state-line jsTest-address-lineField ">
                 <span class="form-sub-label-container" style="vertical-align:top">
-                  <input type="text" id="input_4_state" name="q4_address4[state]" class="form-textbox validate[required] form-address-state" data-defaultvalue="" value="" data-component="state" aria-labelledby="label_4 sublabel_4_state" required="" />
+                  <input type="text" id="input_4_state" name="state" class="form-textbox validate[required] form-address-state" data-defaultvalue="" value="" data-component="state" aria-labelledby="label_4 sublabel_4_state" required="" />
                   <label class="form-sub-label" for="input_4_state" id="sublabel_4_state" style="min-height:13px" aria-hidden="false"> State / Province </label>
                 </span>
               </span>
@@ -126,7 +126,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Customer
             <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
               <span class="form-address-line form-address-zip-line jsTest-address-lineField ">
                 <span class="form-sub-label-container" style="vertical-align:top">
-                  <input type="text" id="input_4_postal" name="q4_address4[postal]" class="form-textbox validate[required] form-address-postal" data-defaultvalue="" value="" data-component="zip" aria-labelledby="label_4 sublabel_4_postal" required="" />
+                  <input type="text" id="input_4_postal" name="postal" class="form-textbox validate[required] form-address-postal" data-defaultvalue="" value="" data-component="postal" aria-labelledby="label_4 sublabel_4_postal" required="" />
                   <label class="form-sub-label" for="input_4_postal" id="sublabel_4_postal" style="min-height:13px" aria-hidden="false"> Postal / Zip Code </label>
                 </span>
               </span>
@@ -143,7 +143,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Customer
         </label>
         <div id="cid_5" class="form-input-wide jf-required" data-layout="half">
           <span class="form-sub-label-container" style="vertical-align:top">
-            <input type="tel" id="input_5_full" name="q5_phoneNumber5[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[required, Fill Mask]" data-defaultvalue="" style="width:310px" data-masked="true" value="" placeholder="(000) 000-0000" data-component="phone" aria-labelledby="label_5" required="" />
+            <input type="tel" id="input_5_full" name="phone" data-type="mask-number" class="mask-phone-number form-textbox validate[required, Fill Mask]" data-defaultvalue="" style="width:310px" data-masked="true" value="" placeholder="(000) 000-0000" data-component="phone" aria-labelledby="label_5" required="" />
             <label class="form-sub-label is-empty" for="input_5_full" id="sublabel_5_masked" style="min-height:13px" aria-hidden="false">  </label>
           </span>
         </div>
@@ -152,7 +152,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Customer
         <label class="form-label form-label-top form-label-auto" id="label_6" for="input_6"> E-mail </label>
         <div id="cid_6" class="form-input-wide" data-layout="half">
           <span class="form-sub-label-container" style="vertical-align:top">
-            <input type="email" id="input_6" name="q6_email6" class="form-textbox validate[Email]" data-defaultvalue="" style="width:310px" size="310" value="" placeholder="ex: email@yahoo.com" data-component="email" aria-labelledby="label_6 sublabel_input_6" />
+            <input type="email" id="input_6" name="email" class="form-textbox validate[Email]" data-defaultvalue="" style="width:310px" size="310" value="" placeholder="ex: email@yahoo.com" data-component="email" aria-labelledby="label_6 sublabel_input_6" />
             <label class="form-sub-label" for="input_6" id="sublabel_input_6" style="min-height:13px" aria-hidden="false"> example@example.com </label>
           </span>
         </div>
@@ -171,7 +171,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Customer
           </span>
         </label>
         <div id="cid_8" class="form-input-wide jf-required" data-layout="half">
-          <select class="form-dropdown validate[required]" id="input_8" name="q8_howDid8" style="width:310px" data-component="dropdown" required="">
+          <select class="form-dropdown validate[required]" id="input_8" name="advertisement" style="width:310px" data-component="dropdown" required="">
             <option value=""> Please Select </option>
             <option value="Newspaper"> Newspaper </option>
             <option value="Internet"> Internet </option>
@@ -194,93 +194,37 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Customer
       <li class="form-line" data-type="control_textarea" id="id_11">
         <label class="form-label form-label-top form-label-auto" id="label_11" for="input_11"> Feedback about us: </label>
         <div id="cid_11" class="form-input-wide" data-layout="full">
-          <textarea id="input_11" class="form-textarea" name="q11_feedbackAbout11" style="width:648px;height:163px" data-component="textarea" aria-labelledby="label_11"></textarea>
+          <textarea id="input_11" class="form-textarea" name="feedback" style="width:648px;height:163px" data-component="textarea" aria-labelledby="label_11"></textarea>
         </div>
       </li>
       <li class="form-line" data-type="control_textarea" id="id_12">
         <label class="form-label form-label-top form-label-auto" id="label_12" for="input_12"> Suggestions if any for further improvement: </label>
         <div id="cid_12" class="form-input-wide" data-layout="full">
-          <textarea id="input_12" class="form-textarea" name="q12_suggestionsIf" style="width:648px;height:163px" data-component="textarea" aria-labelledby="label_12"></textarea>
+        <textarea id="input_12" class="form-textarea" name="suggestion" style="width:648px;height:163px" data-component="textarea" aria-labelledby="label_12"></textarea>
         </div>
       </li>
-      <li class="form-line" data-type="control_checkbox" id="id_13">
-        <label class="form-label form-label-top form-label-auto" id="label_13" for="input_13"> Will you be willing to recommend us? </label>
-        <div id="cid_13" class="form-input-wide" data-layout="full">
-          <div class="form-single-column" role="group" aria-labelledby="label_13" data-component="checkbox">
-            <span class="form-checkbox-item" style="clear:left">
-              <span class="dragger-item">
-              </span>
-              <input type="checkbox" aria-describedby="label_13" class="form-checkbox" id="input_13_0" name="q13_willYou[]" value="Yes" />
-              <label id="label_input_13_0" for="input_13_0"> Yes </label>
-            </span>
-            <span class="form-checkbox-item" style="clear:left">
-              <span class="dragger-item">
-              </span>
-              <input type="checkbox" aria-describedby="label_13" class="form-checkbox" id="input_13_1" name="q13_willYou[]" value="Maybe" />
-              <label id="label_input_13_1" for="input_13_1"> Maybe </label>
-            </span>
-            <span class="form-checkbox-item" style="clear:left">
-              <span class="dragger-item">
-              </span>
-              <input type="checkbox" aria-describedby="label_13" class="form-checkbox" id="input_13_2" name="q13_willYou[]" value="No" />
-              <label id="label_input_13_2" for="input_13_2"> No </label>
-            </span>
-          </div>
+      <li class="form-line jf-required" data-type="control_dropdown" id="id_13">
+        <label class="form-label form-label-top form-label-auto" id="label_13" for="input_13">
+          Will you be willing to recommend us?
+        </label>
+        <div id="cid_8" class="form-input-wide jf-required" data-layout="half">
+          <select class="form-dropdown validate[required]" id="input_8" name="recommendation" style="width:310px" data-component="dropdown" required="">
+            <option value=""> Please Select </option>
+            <option value="Yes"> Yes </option>
+            <option value="Maybe"> Maybe </option>
+            <option value="No"> No </option>
+          </select>
         </div>
       </li>
       <li class="form-line" data-type="control_matrix" id="id_14">
-        <label class="form-label form-label-top" id="label_14" for="input_14"> Please give reference of any two people whom you feel: </label>
+        
         <div id="cid_14" class="form-input-wide" data-layout="full">
-          <table summary="" aria-labelledby="label_14" cellPadding="4" cellSpacing="0" class="form-matrix-table" data-component="matrix">
-            <tr class="form-matrix-tr form-matrix-header-tr">
-              <th class="form-matrix-th" style="border:none">
-                 
-              </th>
-              <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_0">
-                <label id="label_14_col_0"> Full Name </label>
-              </th>
-              <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1">
-                <label id="label_14_col_1"> Address </label>
-              </th>
-              <th scope="col" class="form-matrix-headers form-matrix-column-headers form-matrix-column_2">
-                <label id="label_14_col_2"> Contact Number </label>
-              </th>
-            </tr>
-            <tr class="form-matrix-tr form-matrix-value-tr" aria-labelledby="label_14 label_14_row_0">
-              <th scope="row" class="form-matrix-headers form-matrix-row-headers">
-                <label id="label_14_row_0"> 1 </label>
-              </th>
-              <td class="form-matrix-values">
-                <input type="text" id="input_14_0_0" class="form-textbox" size="5" name="q14_pleaseGive14[0][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_14_col_0 label_14_row_0" />
-              </td>
-              <td class="form-matrix-values">
-                <input type="text" id="input_14_0_1" class="form-textbox" size="5" name="q14_pleaseGive14[0][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_14_col_1 label_14_row_0" />
-              </td>
-              <td class="form-matrix-values">
-                <input type="text" id="input_14_0_2" class="form-textbox" size="5" name="q14_pleaseGive14[0][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_14_col_2 label_14_row_0" />
-              </td>
-            </tr>
-            <tr class="form-matrix-tr form-matrix-value-tr" aria-labelledby="label_14 label_14_row_1">
-              <th scope="row" class="form-matrix-headers form-matrix-row-headers">
-                <label id="label_14_row_1"> 2 </label>
-              </th>
-              <td class="form-matrix-values">
-                <input type="text" id="input_14_1_0" class="form-textbox" size="5" name="q14_pleaseGive14[1][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_14_col_0 label_14_row_1" />
-              </td>
-              <td class="form-matrix-values">
-                <input type="text" id="input_14_1_1" class="form-textbox" size="5" name="q14_pleaseGive14[1][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_14_col_1 label_14_row_1" />
-              </td>
-              <td class="form-matrix-values">
-                <input type="text" id="input_14_1_2" class="form-textbox" size="5" name="q14_pleaseGive14[1][]" style="width:100%;box-sizing:border-box" value="" aria-labelledby="label_14_col_2 label_14_row_1" />
-              </td>
-            </tr>
-          </table>
         </div>
       </li>
       <li class="form-line" data-type="control_button" id="id_2">
         <div id="cid_2" class="form-input-wide" data-layout="full">
           <div data-align="left" class="form-buttons-wrapper form-buttons-left   jsTest-button-wrapperField">
-            <button id="input_2" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
+            <button id="input_2" name="submit" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
               Submit
             </button>
           </div>
@@ -319,7 +263,93 @@ for (var i = 0; i < all_spc.length; i++)
       <a class="formFooter-button" href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=212771750520450&utm_content=jotform_button&utm_campaign=powered_by_jotform_le" target="_blank">Create your own Jotform</a>
     </div>
   </div>
-</form></body>
+</form>
+<?php 
+                        //variables set to empty values 
+                        $firstname = "";
+                        $lastname = "";
+                        $streetaddress = "";
+                        $streetaddress2 = "";
+                        $city = "";
+                        $state = "";
+                        $postal = "";
+                        $phone = "";
+                        $email = "";
+                        $advertisement = "";
+                        $feedback = "";
+                        $suggestion = "";
+                        $recommendation = "";
+                    
+
+                    
+                        if(isset($_POST['submit']))
+                            {
+                                    //save the values that the user inputted from the HTML form to the PHP variables
+                                    $firstname = test_input($_POST["firstName"]);
+                                    $lastname = test_input($_POST["lastName"]);
+                                    $streetaddress = test_input($_POST["streetAddress"]);
+                                    $streetaddress2 = test_input($_POST["streetAddress2"]);
+                                    $city = test_input($_POST["city"]);
+                                    $state = test_input($_POST["state"]);
+                                    $postal = test_input($_POST["postal"]);
+                                    $phone = test_input($_POST["phone"]);
+                                    $email = test_input($_POST["email"]);
+                                    $advertisement = test_input($_POST["advertisement"]);
+                                    $feedback = test_input($_POST["feedback"]);
+                                    $suggestion = test_input($_POST["suggestion"]);
+                                    $recommendation = test_input($_POST["recommendation"]);
+                               
+                                    
+                            }
+                            
+
+                            
+                            
+                             
+
+                        
+
+                        function test_input($data){
+                            $data = trim($data);
+                            $data = stripslashes($data);
+                            $data = htmlspecialchars($data);
+                            return $data;
+                        }
+                        ?>
+
+                        <?php
+                        //Display the inputs on the form
+                        echo "<h2>Customer Details:</h2>";
+                        echo $firstname;
+                        echo "<br>";
+                        echo $lastname;
+                        echo "<br>";
+                        echo $streetaddress;
+                        echo "<br>";
+                        echo $streetaddress2;
+                        echo "<br>";
+                        echo $city;
+                        echo "<br>";
+                        echo $state;
+                        echo "<br>";
+                        echo $postal;
+                        echo "<br>";
+                        echo $phone;
+                        echo "<br>";
+                        echo $email;
+                        echo "<br>";
+                        echo $advertisement;
+                        echo "<br>";
+                        echo $feedback;
+                        echo "<br>";
+                        echo $suggestion;
+                        echo "<br>";
+                        echo $recommendation;
+                        echo "<br>";
+
+                        
+                    ?>
+</body>
 </html>
 <script type="text/javascript">JotForm.ownerView=true;</script><script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.28175"></script>
 <script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.28175"></script>
